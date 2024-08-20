@@ -18,20 +18,24 @@ const userSchema = new Schema(
             ref: 'thoughts'
         }  
     ],
-    friends: [
-           {
-               _id: friends, 
-               ref: 'friendSchema'
+    // friends: [
+    //        {
+    //            _id: friends, 
+    //            ref: 'friendSchema'
 
-           }
-    ]
+    //        }
+    // ]
     });
 
 //create virtual for friend count 
-friendSchema
-.virtual('getFriendCount')
-.get(function () {
-    return this.friends.length
-});
+// friendSchema
+// .virtual('getFriendCount')
+// .get(function () {
+//     return this.friends.length
+// });
 
-const Friend = model('friend', friendSchema)
+// const Friend = model('friend', friendSchema)
+
+const User = model('user', userSchema);
+
+module.exports = User;

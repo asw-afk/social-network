@@ -13,12 +13,12 @@ const thoughtSchema = new Schema (
             default: Date.Now
         },
         username: {
-            type: 'Username',
+            type: String,
             ref: 'User'
         },
-        reactions:[reactionSchema],
+        // reactions:[reactionSchema],
     },
 )
 
 
-module.exports = User;
+module.exports = thoughtSchema;
